@@ -1,0 +1,10 @@
+#!/bin/bash
+set -euo pipefail
+
+# Ensure Node.js is available
+if ! command -v node &> /dev/null; then
+  echo "Node.js not found. Installing via brew..."
+  brew install node
+fi
+
+echo "Node $(node --version) ready"
