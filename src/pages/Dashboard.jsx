@@ -39,7 +39,7 @@ export default function Dashboard() {
         </div>
 
         <div className={styles.gridStats}>
-          <CardThing stat="Users" subtext="12,480" footerNote="+3.2% vs last week" />
+          <CardThing stat="Users" subtext="12,480" footerNote="+3.2% vs last week" explodeOnHover />
           <CardThing stat="Revenue" subtext="$842k" footerNote="MTD" />
           <CardThing stat="Tickets" subtext="37 open" footerNote="SLA 94%" />
           <CardThing stat="Uptime" subtext="99.98%" footerNote="30d rolling" />
