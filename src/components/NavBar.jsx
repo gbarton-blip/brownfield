@@ -12,7 +12,7 @@ const NAV_LINKS = [
 /** Global app chrome — same links on every screen. */
 export default function NavBar({ brand }) {
   return (
-    <header className="flex flex-wrap items-center justify-between gap-4 border-b border-[#E5E7EB] bg-[#F0F7FF] px-6 py-4">
+    <header className="flex flex-wrap items-center justify-between gap-4 border-b border-[#E5E7EB] bg-[#F5FAFF] px-6 py-4">
       <Link to="/dashboard" className="no-underline">
         <div className="text-[22px] font-bold text-[#2563EB]">{brand}</div>
       </Link>
