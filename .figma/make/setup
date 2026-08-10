@@ -1,0 +1,18 @@
+#!/bin/bash
+set -e
+
+# System dependencies for this project. Runs the first time Make Local sees
+# this repo (cached afterwards). This is a Vite + React app, so all it needs
+# is Node.js on the PATH.
+
+echo "Checking system dependencies..."
+
+NODE_VERSION="$(node --version 2>/dev/null || echo "none")"
+if [[ "$NODE_VERSION" == "none" ]]; then
+  echo "Node.js is not installed. Installing via Homebrew..."
+  brew install node
+else
+  echo "Node $NODE_VERSION OK"
+fi
+
+echo "System dependencies verified."

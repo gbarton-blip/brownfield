@@ -1,0 +1,16 @@
+#!/bin/bash
+set -e
+
+# Project dependencies. Runs at the start of every Make Local session.
+# Uses `npm ci` when the lockfile is in sync for a fast, reproducible install,
+# and falls back to `npm install` otherwise.
+
+echo "Installing project dependencies..."
+
+if [ -f package-lock.json ]; then
+  npm ci || npm install
+else
+  npm install
+fi
+
+echo "Dependencies installed."

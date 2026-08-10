@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+
+# Starts the Vite development server. Make Local keeps this process running in
+# the background for the whole session. We pass --host and an explicit --port so
+# the server binds predictably and matches .figma/make/env.
+
+echo "Starting development server on port ${PORT:-5173}..."
+exec npm run dev -- --host --port "${PORT:-5173}"
